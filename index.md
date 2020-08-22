@@ -4,9 +4,20 @@ You can use the [editor on GitHub](https://github.com/git-JaforIqbal/blog/edit/g
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### PHP random string generator
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```
+PHP random string generator
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+```
 
 ```markdown
 Syntax highlighted code block
