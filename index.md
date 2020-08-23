@@ -32,6 +32,21 @@ function is_connected()
 
 }
 ```
+### Oracle SQL: Update a table with data from another table
+This is called a correlated update
+
+```
+UPDATE table1 t1
+   SET (name, desc) = (SELECT t2.name, t2.desc
+                         FROM table2 t2
+                        WHERE t1.id = t2.id)
+ WHERE EXISTS (
+    SELECT 1
+      FROM table2 t2
+     WHERE t1.id = t2.id )
+```
+
+
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://jaforiqbal.com) and we’ll help you sort it out.
